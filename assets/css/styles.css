@@ -24,7 +24,7 @@ blue: #57BCE5
     background-color: #2b2d2e;
     font-size: 16pt;
     padding: 10px 10px;
-    border: 3px solid #57BCE5;
+    border-top: 3px solid #57BCE5;
   }
   
   .main-footer {
@@ -52,14 +52,16 @@ blue: #57BCE5
   
   .holy-grail-sidebar-right {
     order: 1;
-    background-color: gray;
+    background-color: #525457;
     max-width: 5%;
+    margin-left: 20px;
   }
   
   .holy-grail-sidebar-left {
     order: -1;
-    background-color: gray;
+    background-color: #525457;
     max-width: 5%;
+    margin-right: 20px;
   }
   .std-shadow, .std-image{
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7); /* Apply box shadow */
@@ -124,3 +126,10 @@ blue: #57BCE5
     }
 
   }
+
+  #main-svg {
+    width: 100px;
+    fill: #fafbfd;
+    position: relative;
+    float: left;
+}
