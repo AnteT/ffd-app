@@ -2,17 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FFD Application</title>
   </head>
   <body class="holy-grail">
           <header class="main-header">
-            HEADER CONTENT
+            Artificial Facial Detection & Classification<br>
+            Separating Real Faces from the Artificially Generated<br>
+            <span style="font-size: 12pt;">Ante Tonkovic-Capin and Udhbhav Gupta</span>
           </header>
           <div class="holy-grail-body">
             <section class="holy-grail-content">
-              MAIN CONTENT
+              <!-- Motivation -->
+              <h1 class="std-header">Motivation</h1>
+              <hr>
+              <p>
+                Artificially generated image technology has become increasingly sophisticated, sometimes termed as 'Deep Fakes', allowing the creation of realistic videos and images that can deceive viewers. In recent years this has become even more acute, with increasingly advanced techniques for creating artificial images and detecting them leading to a sort of arms race in the field. This is particularly dangerous when it comes to false or misleading representations of individuals. Detecting fake or manipulated images in the case where individuals are artificially generated is crucial to prevent their malicious use in spreading misinformation, identity theft, and other harmful activities. Our project aims to explore the potential of implementing a AI generated detection system for facial images using modern computer vision techniques.                
+              </p>
+              <p>
+                Below is an example of just how powerful modern image generation and manipulation techniques have become. Using the original Mona Lisa, just a single image as reference, multiple different perspectives and poses can be generated and seemingly bring her to life:
+              </p>
+              <figure>
+                <img src="https://s2.glbimg.com/5dLkOHpd5r0KZ0S3Pr1BtgP5krU=/e.glbimg.com/og/ed/f/original/2019/05/24/monalisa.gif" alt="Monalisa Comes to Life GIF" class="std-border">
+                <figcaption>
+                  Egor Zakharov Skolkovo Institute of Science
+                </figcaption>
+              </figure>
+              <!-- Defining Real vs Fake -->
+              <h1 class="std-header">Defining Real vs Fake</h1>
+              <hr>
+              <p>Before moving on, we first need to establish what we mean when we say a face is either "Real" or "Fake". This is not as easy as it sounds, especially when trying to establish an objective line between standard processing and false represntation. 
+                
+                With the widespread use of image processing, filters on social media, image manipulation has become a widespread phenomenon. 
+                These tools have democratized the ability to alter images, making it possible for anyone to modify their photos with just a few taps on a screen. 
+                From simple filters that adjust lighting and color, to more complex features that can smooth skin, change eye color, or even reshape facial features, these apps have transformed the way we present ourselves online. 
+                While these tools can be used creatively and for fun, they also raise questions about authenticity and blur the line between what should be considered “real” and “fake”.
+                Take these four images as an example, as we go from left to right we increasingly manipulate the image using various techniques:
+              </p>
+              <figure>
+                <img src="assets/figs/rvf1.png" alt="RVF: Original" class="std-img" style="width:20vw;padding-right:10px;">
+                <img src="assets/figs/rvf2.png" alt="RVF: Original" class="std-img" style="width:20vw;padding-right:10px;">
+                <img src="assets/figs/rvf3.png" alt="RVF: Original" class="std-img" style="width:20vw;padding-right:10px;">
+                <img src="assets/figs/rvf4.png" alt="RVF: Original" class="std-img" style="width:20vw;">
+                <figcaption>
+                  Right image generated using Stable Diffusion model at https://www.artguru.ai/ai-text-to-image-generator using left-most image as input
+                </figcaption>
+              </figure>              
+              <p>
+                The left-most image is the unaltered original, even here "unaltered" still includes the native iPhone 14 camera's compensation and processing. 
+                The second image has only been modified in changing the original color to black & white. 
+                The third image has additional modifications, including some sharp changes to contrast and clipping pixel intensities at both ends of the color range with the addition of a slight Gaussian blur as well. 
+                The fourth image is the output from Stable Diffusion as a result of the prompt "modify the faces of the human and the dog" when provided with the original unaltered image. In the case of these four images, you could fairly argue that the first two should be classified as "Real", while the second two considered "Fake". Easy enough right?
+
+                Instead of four discrete stages of modifications, consider we have a spectrum of all the images inbetween these four. Each step slightly more manipulated and modified than the last. At which image, which level of alteration from the original image, can we stop and draw a line to declare everything beyond this level is considered "Fake"? Considering this difficulty, we used the following verbose but careful definition when defining what constitues a "Real" human facial image:
+                </p>
+                <p style="font-style: italic;padding-left:30px;text-indent: 0px;">
+                  The face, as digitally represented, is considered real if it existed physically as a biological human at a moment in time and faithfully depicts the countenance, demeanor and position originally expressed by the digital representation such that the average observer's prima facie impression would reflect the reality of the moment captured.
+                </p>
+                <p>
+                All this to say that we consider an image of a face as "Real" if it accurately represents a moment in time, and the average observer should be left with an accurate impression of the moment when presented the image that reflects it. For the purposes of this project, it is easier to classify what constitues a "Fake" image of a face, the majority we use are those artificially generated by GAN models or models performing localized manipulations of facial features.
+              </p>
+              <!-- Related Work -->
+              <h1 class="std-header">Related Work</h1>
+              <hr>
+              <p>
+                Related Work placeholder
+              </p>
+              <!-- Methodology -->
+              <h1 class="std-header">Methodology</h1>
+              <hr>
+              <p>
+                Methodology placeholder
+              </p>              
+
+
+                
+            <br>
             </section>
             <div class="holy-grail-sidebar-left hg-sidebar">
               <!-- LEFT SIDEBAR -->
@@ -22,7 +88,7 @@
             </div>
           </div>
           <footer class="main-footer">
-            FOOTER CONTENT
+            Created for Computer Vision 766, University of Wisconsin-Madison Graduate School of Computer Sciences
           </footer>
       </body>
 </html>

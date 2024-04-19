@@ -2,15 +2,27 @@
   body {
     width: 100%;
     margin: 0px;
-    background-color: lightblue;
+    background-color: #fafbfd;
+    font-family: monospace;
   }
   
-  .main-header {
-    background-color: pink;
+  p {
+    text-align: left;
+    text-indent: 20px;
   }
-
+  .main-header {
+    color: #fafbfd;
+    background-color: #2b2d2e;
+    font-size: 16pt;
+    padding: 10px 10px;
+    border: 3px solid #57BCE5;
+  }
+  
   .main-footer {
-    background-color: yellow;
+    color: #fafbfd;
+    background-color: #2b2d2e;
+    font-size: 8pt;
+    padding: 4px;
   }
   .holy-grail {
     min-height: 100vh;
@@ -26,20 +38,43 @@
   
   .holy-grail-content {
     flex: 1 1 auto;
+    text-align: center;
   }
   
   .holy-grail-sidebar-right {
     order: 1;
     background-color: gray;
-    max-width: 4%;
+    max-width: 5%;
   }
   
   .holy-grail-sidebar-left {
     order: -1;
     background-color: gray;
-    max-width: 4%;
+    max-width: 5%;
   }
-  
+  .std-header {
+    text-align: left;
+  }
+  .std-border {
+    border:2px solid #57BCE5;
+  }
+  hr {
+    height: 1px;
+    background-color: #2b2d2e;
+    border: none;
+    margin: 14px 0;
+  }
+  figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  figcaption {
+      font-style: italic;
+      font-size: 12px;
+      color: #464545;
+  }
   /* desktop default that applies when screenwidth is at least min-width value */
   @media (min-width: 768px) {
     .holy-grail-body {
