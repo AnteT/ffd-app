@@ -25,6 +25,10 @@ blue: #57BCE5
     font-size: 16pt;
     padding: 10px 10px;
     border-top: 3px solid #57BCE5;
+
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
   }
   
   .main-footer {
@@ -128,8 +132,9 @@ blue: #57BCE5
   }
 
   #main-svg {
-    /* width: 100px; */
+    width: 200px;
     padding: 10px 10px;
+    min-height: 70px;
     height: 70px;
     fill: #fafbfd;
     position: relative;
