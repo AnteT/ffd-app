@@ -1,0 +1,8 @@
+matplotlib==3.8.3
+numpy==1.26.4
+opencv-python==4.9.0.80
+Pillow==10.1.0
+SQLDataModel==0.3.11
+torch==2.4.0.dev20240317+cu121
+torchaudio==2.2.0.dev20240317+cu121
+torchvision==0.18.0.dev20240317+cu121

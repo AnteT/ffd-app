@@ -15,6 +15,14 @@ blue: #57BCE5
     font-family: monospace;
   }
   
+  .std-red {
+    border: 3px solid  #E35F5F
+  }
+  .std-green {
+    border: 3px solid  #AEBD57
+  }
+
+
   p {
     text-align: left;
     text-indent: 20px;
