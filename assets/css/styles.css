@@ -22,6 +22,17 @@ blue: #57BCE5
     border: 3px solid  #AEBD57
   }
 
+  .std-code {
+    background-color: #f3eeee; /* Background color */
+    border: 1px solid #bcb7b7; /* Border */
+    padding: 1px 2px; /* Padding */
+    font-family: monospace; /* Monospaced font */
+    white-space: pre-wrap; /* Preserve line breaks */
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+    border-radius: 2px;
+    font-size: 9pt;
+}
+
 
   p {
     text-align: left;
