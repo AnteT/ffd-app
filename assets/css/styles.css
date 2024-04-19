@@ -128,7 +128,9 @@ blue: #57BCE5
   }
 
   #main-svg {
-    width: 100px;
+    /* width: 100px; */
+    padding: 10px 10px;
+    height: 70px;
     fill: #fafbfd;
     position: relative;
     float: left;
