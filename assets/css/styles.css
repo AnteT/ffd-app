@@ -8,6 +8,13 @@ yellow: #F4D968
 blue: #57BCE5
 
 */  
+.std-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content:center;
+}
+
   body {
     width: 100%;
     margin: 0px;
@@ -16,12 +23,14 @@ blue: #57BCE5
   }
   
   .std-red {
-    border: 3px solid  #E35F5F
+    border: 3px solid  #E35F5F;
   }
   .std-green {
-    border: 3px solid  #AEBD57
+    border: 3px solid  #AEBD57;
   }
-
+  .std-plum {
+    border: 3px solid #c8a4c6;
+  }
   .std-code {
     background-color: #f3eeee; /* Background color */
     border: 1px solid #bcb7b7; /* Border */
@@ -43,12 +52,25 @@ blue: #57BCE5
     background-color: #2b2d2e;
     font-size: 14pt;
     padding: 10px 10px;
-    border-top: 3px solid #57BCE5;
+    border-top: 3px solid #a80925;
+    border-left: 3px solid #a80925;
+    border-right: 3px solid #a80925;
     display: flex; /* Use flexbox */
-    justify-content: space-between; /* Center items horizontally */
+    justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
+    
+    
+    justify-content:space-between; /* Center items horizontally */
   }
-  
+  .subheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a80925;
+    color: #fafbfd;
+    padding: 3px;
+    font-size: 8pt;
+  }
   .main-footer {
     color: #fafbfd;
     background-color: #2b2d2e;
@@ -143,18 +165,18 @@ blue: #57BCE5
   
     .holy-grail-sidebar-left, .holy-grail-sidebar-right {
       flex: 0 0 260px;
-      background-color: blue;
       max-width: 0%;
     }
 
   }
 
   #main-svg {
-    width: 200px;
-    padding: 10px 10px;
-    min-height: 70px;
-    height: 70px;
+    margin-top: -6px;
+    margin-left: -6px;
+    padding: 6px 6px;
+    min-height: 60px;
+    height: 60px;
     fill: #fafbfd;
-    /* position: relative; */
+    position: relative;
     float: left;
 }
