@@ -1,3 +1,20 @@
+"""
+run_inference.py
+
+Script for running inference on one or more images for Fake Facial Detection.
+
+Usage:
+    python ./run_inference.py [-h] [-d] "path/to/image1.png" ["path/to/image2.png"] ...
+
+Parameters:
+    path/to/image1.png: Path to the first image to be processed.
+    path/to/image2.png: (Optional) Path to additional images to be processed. You can pass multiple image paths as arguments.
+
+Example:
+    python ./run_inference.py "path/to/image1.png" "path/to/image2.png" "path/to/image3.png"
+"""
+
+import argparse
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -104,12 +121,31 @@ def run_inference(image_path:str, ffx:v2.Transform=FFXPhase, ffd:nn.Module=FFDPh
         plt.show()    
     return pred.item(), prob    
 
-if __name__ == '__main__':
+def run_demo() -> None:
+    """Run inference on the provided demonstration images."""
     # Demo using provided fake image:
-    fake_img = "inference-portable/fake-face.jpg" 
+    fake_img = "./fake-face.jpg"
     run_inference(fake_img, display_result=True)
-    
+
     # Demo using provided real image:
-    real_img = "inference-portable/real-face.jpg"
-    run_inference(real_img, display_result=True)
-    
+    real_img = "./real-face.jpg"
+    run_inference(real_img, display_result=True)    
+
+
+def main() -> None:
+    """Primary entry-point for running inference through CLI arguments for one or more image paths."""
+    parser = argparse.ArgumentParser(description='Run Facial Extraction & Fake Facial Detection inference on one or more images.')
+    parser.add_argument('image_paths', nargs='+', help='Paths to the images to be processed, at least 1 is required.')
+    parser.add_argument('-d', '--display', action='store_true', help='Display the images with the result.')
+    args = parser.parse_args()
+    image_paths = args.image_paths
+    display = args.display
+    for image_path in image_paths:
+        run_inference(image_path=image_path, display_result=display)
+
+if __name__ == '__main__':
+    # Provide args to the script in the form of image paths:
+    main()
+
+    # Alternatively, uncomment the line below to run the demo:
+    # run_demo()

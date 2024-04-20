@@ -44,9 +44,8 @@ blue: #57BCE5
     font-size: 14pt;
     padding: 10px 10px;
     border-top: 3px solid #57BCE5;
-
     display: flex; /* Use flexbox */
-    justify-content: center; /* Center items horizontally */
+    justify-content: space-between; /* Center items horizontally */
     align-items: center; /* Center items vertically */
   }
   
@@ -156,6 +155,6 @@ blue: #57BCE5
     min-height: 70px;
     height: 70px;
     fill: #fafbfd;
-    position: relative;
+    /* position: relative; */
     float: left;
 }
