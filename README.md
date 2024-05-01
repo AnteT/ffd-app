@@ -3,7 +3,9 @@
 
 ---
 ### Project Structure
-This repository is a part of a broader submission for Computer Vision 766 at the University of Wisconsin-Madison for Spring 2024 semester. The website is available [here](https://antet.github.io/ffd-app), while the rest of the project is structured as follows:
+This repository is a part of a broader submission for Computer Vision 766 at the University of Wisconsin-Madison for Spring 2024 semester. It represents the website and presentation code portion and is a companion repository for the related [source repository](https://github.com/AnteT/cs766-project) which contains the source code used for training, validation and testing.
+
+The website is available [here](https://antet.github.io/ffd-app), while the rest of the project is structured as follows:
 
 ```text
 Project
@@ -39,15 +41,16 @@ Ensure the pretrained model `ffd.pt` and sample images, `real-face.jpg` and `fak
 
 ---
 
-### Source Repository
+### Source Code Repository
 
-The full project repository, source code, training results, prior models, training datasets, project proposals and midterm report are all available in the primary project [repository](https://github.com/AnteT/cs766-project).
+The full project repository, source code, training results, prior models, training datasets, project proposals and midterm report are all available in the [project source repository](https://github.com/AnteT/cs766-project).
 
 ---
 
-### Presentation Slides
+### Website and Demo Repository
 
-The presentation content and slides can be found in this repo in the `presentation-slides` directory here:
+The website repository, inference demos, sample images and presentation slides are all available in the [website and demo repository](https://github.com/AnteT/ffd-app). This is the repository you are currently in. The slides can be found in this repo in the `presentation-slides` directory:
+
 ```text
 Project
    └── presentation-slides/
