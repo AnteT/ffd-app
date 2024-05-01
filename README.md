@@ -2,10 +2,16 @@
 #### Ante Tonkovic-Capin & Udhbhav Gupta
 
 ---
-### Project Structure
-This repository is a part of a broader submission for Computer Vision 766 at the University of Wisconsin-Madison for Spring 2024 semester. It represents the website and presentation code portion and is a companion repository for the related [source repository](https://github.com/AnteT/cs766-project) which contains the source code used for training, validation and testing.
 
-The website is available [here](https://antet.github.io/ffd-app), while the rest of the project is structured as follows:
+### Project Structure
+
+This repository is a part of a broader submission for Computer Vision 766 at the University of Wisconsin-Madison for Spring 2024 semester. It represents the website and presentation code portion and is a companion repository for the related [source repository](https://github.com/AnteT/cs766-project) which contains the source code used for training, validation and testing. The three primary portions of the broader submission are linked below:
+
+- [**Final Website**](https://antet.github.io/ffd-app)
+- [**Source Repository**](https://github.com/AnteT/cs766-project)
+- [**Presentation Repository**](https://github.com/AnteT/ffd-app)
+
+While the rest of this project repository is structured as follows:
 
 ```text
 Project
@@ -25,6 +31,7 @@ To run the model for inference, or reproduce the demonstration, follow the instr
 ---
 
 ### Run Inference
+
 Install the inference dependencies with `pip install -r requirements.txt`, then run the primary inference script `run_inference.py` using either the provided example images or your own. To run inference on your own images:
 
 ```bash
