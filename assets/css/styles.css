@@ -8,6 +8,24 @@ yellow: #F4D968
 blue: #57BCE5
 
 */  
+.references-list {
+  text-align: left;
+  list-style-type: none; /* Remove default list styles */
+  counter-reset: citation-counter; /* Reset the counter for ordered list */
+}
+.references-item {
+  margin-bottom: 10px;
+  position: relative;
+}
+.references-item::before {
+  content: counter(citation-counter) ". "; /* Set the counter content */
+  counter-increment: citation-counter; /* Increment the counter for each list item */
+  font-weight: bold; /* Bold the list item number */
+  position: absolute;
+  left: -20px; /* Adjust position to align with list items */
+}
+
+
 .std-flex {
   display: flex;
   justify-content: center;
